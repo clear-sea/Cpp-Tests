@@ -7,12 +7,12 @@ int main(){
 		cin>>a[i];
 	}
 	for(int i=1;i<n;i++){
-		for(int j=1;j<=n-i;j++){
-			if(a[j]>a[j+1]){
+		for(int j=n;j>i;j--){
+			if(a[j]>a[j-1]){
 				int t;
 				t=a[j];
-				a[j]=a[j+1];
-				a[j+1]=t;
+				a[j]=a[j-1];
+				a[j-1]=t;
 			}
 		}
 	}
